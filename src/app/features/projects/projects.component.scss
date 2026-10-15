@@ -1,0 +1,235 @@
+.projects-section {
+  position: relative;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.projects-header {
+  max-width: 680px;
+  margin-bottom: 3.5rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* --- Project Card --- */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+
+  &:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow-blue);
+  }
+
+  &.expanded {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-glow-blue);
+  }
+}
+
+/* Banner */
+.project-banner {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+  }
+}
+
+.project-category {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.project-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.08);
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+}
+
+/* Card body */
+.project-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.project-context {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+/* Stack */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: flex-start;
+  max-width: 280px;
+
+  @media (max-width: 768px) {
+    max-width: none;
+  }
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  background: color-mix(in srgb, var(--badge-color, #4f8ef7) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge-color, #4f8ef7) 25%, transparent);
+  color: color-mix(in srgb, var(--badge-color, #4f8ef7) 80%, var(--text-primary) 20%);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: color-mix(in srgb, var(--badge-color, #4f8ef7) 20%, transparent);
+  }
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+
+  .btn svg {
+    transition: transform var(--transition-base);
+    &.rotated { transform: rotate(180deg); }
+  }
+}
+
+/* Case Study Expand Panel */
+.case-study {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.open {
+    max-height: 2000px;
+  }
+}
+
+.case-study-inner {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2rem;
+}
+
+.case-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  svg { flex-shrink: 0; }
+}
+
+.case-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.65;
+
+    &::before {
+      content: '•';
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+  }
+
+  &.challenges li::before { color: #f59e0b; }
+  &.outcomes  li::before { color: #22c55e; }
+}
+
+.case-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
