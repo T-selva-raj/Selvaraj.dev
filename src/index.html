@@ -15,33 +15,29 @@
   <!-- Indexing -->
   <meta name="robots" content="index, follow">
 
-  <!-- Canonical URL: use your preferred domain -->
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://selvarajdev.in/">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Selvaraj T Portfolio">
   <meta property="og:title" content="Selvaraj T | Angular & Node.js Full Stack Developer">
-  <meta property="og:description"
-    content="Explore Selvaraj T's full-stack projects and experience with Angular, Node.js and PostgreSQL.">
-  <meta property="og:url" content="https://selvarajdev.in/">
-  <meta property="og:image" content="https://selvarajdev.in/assets/images/profile.jpg">
-  <meta property="og:image:alt" content="Selvaraj T - Full Stack Developer">
-
-  <!-- LinkedIn / Instagram link previews: Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Selvaraj T | Full Stack Developer">
   <meta property="og:description"
     content="Full Stack Developer specializing in Angular, Node.js, TypeScript and PostgreSQL. Explore my projects and experience.">
   <meta property="og:url" content="https://selvarajdev.in/">
   <meta property="og:image" content="https://selvarajdev.in/assets/images/profile.jpg">
   <meta property="og:image:alt" content="Selvaraj T - Full Stack Developer">
-  <meta property="og:site_name" content="Selvaraj T Portfolio">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Selvaraj T | Angular & Node.js Full Stack Developer">
+  <meta name="twitter:description" content="Explore Selvaraj T's full-stack projects and experience.">
+  <meta name="twitter:image" content="https://selvarajdev.in/assets/images/profile.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -53,15 +49,23 @@
 </head>
 
 <body>
-  <app-root></app-root>
+  <app-root>
+    <!-- Fallback content for search engine crawlers before Angular loads -->
+    <div style="display: none;">
+      <h1>Selvaraj T - Full Stack Developer</h1>
+      <p>Specializing in Angular, Node.js, TypeScript, and PostgreSQL. Explore my projects and software development
+        experience.</p>
+    </div>
+  </app-root>
 
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://www.selvarajdev.in/#person",
+    "@id": "https://selvarajdev.in/#person",
     "name": "Selvaraj T",
-    "url": "https://www.selvarajdev.in/",
+    "url": "https://selvarajdev.in/",
     "jobTitle": "Angular Node JS Fullstack Developer",
     "knowsAbout": [
       "Angular",
