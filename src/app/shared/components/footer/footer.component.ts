@@ -72,10 +72,7 @@ import { PERSONAL_INFO } from '../../../data/profile.data';
           <p class="copyright">
             © {{ year }} Selvaraj T. Built with Angular 18.
           </p>
-          <p class="built-with">
-            Designed & developed in Chennai, India
-            <span class="heart">♥</span>
-          </p>
+          
         </div>
       </div>
     </footer>
