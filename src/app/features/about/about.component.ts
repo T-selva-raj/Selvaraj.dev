@@ -16,7 +16,7 @@ import { PERSONAL_INFO, SKILL_CATEGORIES } from '../../data/profile.data';
           <div class="about-portrait reveal">
             <div class="about-img-wrap">
               <img
-                src="assets/images/profile.png"
+                src="assets/images/profile.jpg"
                 alt="Selvaraj T — Full Stack Developer based in Chennai"
                 class="about-img"
                 loading="lazy"

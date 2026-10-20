@@ -94,7 +94,7 @@ import { PERSONAL_INFO, ROLES } from '../../data/profile.data';
             <div class="portrait-ring ring-2"></div>
             <div class="portrait-inner">
               <img
-                src="assets/images/profile-1.png"
+                src="assets/images/profile-1.jpg"
                 alt="Selvaraj T — Full Stack Developer"
                 class="portrait-img"
                 loading="eager"
