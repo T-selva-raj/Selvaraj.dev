@@ -56,7 +56,7 @@ import { PERSONAL_INFO } from '../../data/profile.data';
                 </div>
                 <div class="channel-info">
                   <span class="channel-label">LinkedIn</span>
-                  <span class="channel-value">selva-raj-t-001322241</span>
+                  <span class="channel-value">selvaraj-t-001322241</span>
                 </div>
                 <svg class="channel-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>

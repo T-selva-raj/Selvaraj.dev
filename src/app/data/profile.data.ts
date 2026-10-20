@@ -13,7 +13,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   subtitle: 'Angular & Node.js Developer',
   location: 'Chennai, Tamil Nadu, India',
   email: 'selvarajpersonal24@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/selvaraj-t-0013222',
+  linkedin: 'https://www.linkedin.com/in/selvaraj-t-001322241',
   github: 'https://github.com/T-selva-raj',
   bio: `I'm a Computer Science graduate and passionate Full Stack Developer with 3.5+ years of experience building enterprise-grade web applications. I specialize in Angular for rich client-side experiences and Node.js for scalable, maintainable backend services. I've worked across education management platforms, e-commerce systems, REST API ecosystems, and payment integrations — always focused on performance, code quality, and real engineering impact.`,
   resumeUrl: 'assets/resume/Selvaraj_T_Full_Stack_Developer_Resume.pdf',
