@@ -59,7 +59,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
             <div class="section-divider reveal reveal-delay-2"></div>
 
             <p class="about-text reveal reveal-delay-2">
-              I'm a Computer Science graduate and Full Stack Developer with 3.5+ years of
+              I'm a  Full Stack Developer with 3.5+ years of
               professional experience building enterprise web applications. I specialize in
               <strong>Angular</strong> for rich, responsive frontends and <strong>Node.js</strong>
               for scalable, maintainable backend services.
