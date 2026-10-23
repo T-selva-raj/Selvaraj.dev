@@ -60,7 +60,9 @@
   object-position: center top;
   transition: transform 0.5s ease;
 
-  &:hover { transform: scale(1.03); }
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .about-placeholder {
@@ -166,17 +168,20 @@
 }
 
 .highlight-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--accent-blue-glow);
-  border: 1px solid var(--border-glow);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-blue);
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
-  margin-top: 2px;
+  color: var(--accent-color, #6366f1);
+}
+
+.highlight-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  stroke: currentColor;
 }
 
 .highlight-title {

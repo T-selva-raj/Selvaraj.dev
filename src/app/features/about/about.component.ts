@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PERSONAL_INFO, SKILL_CATEGORIES } from '../../data/profile.data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -74,8 +75,8 @@ import { PERSONAL_INFO, SKILL_CATEGORIES } from '../../data/profile.data';
             <!-- Highlight cards -->
             <div class="highlight-grid reveal reveal-delay-4">
               @for (h of highlights; track h.title) {
-                <div class="highlight-card">
-                  <span class="highlight-icon" [innerHTML]="h.icon"></span>
+                <div class="highlight-card">.
+                  <span class="highlight-icon" [innerHTML]="getSafeIcon(h.icon)"></span>
                   <div>
                     <h4 class="highlight-title">{{ h.title }}</h4>
                     <p class="highlight-desc">{{ h.desc }}</p>
@@ -131,6 +132,11 @@ export class AboutComponent implements OnInit {
     'PostgreSQL', 'Sequelize', 'RxJS', 'JWT', 'Stripe', 'SendGrid', 'Git',
   ];
 
+  constructor(private sanitizer: DomSanitizer) { }
+
+  getSafeIcon(icon: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(icon);
+  }
   ngOnInit(): void {
     this.initScrollReveal();
   }
